@@ -1,6 +1,6 @@
 /*
 Solution 2nd
-- TC : O(N) SC: O(N)
+- TC : O(N) SC: O(1)
 - Difficulty : Easy - Medium , depends if you know the concept
 - I used swap sort with marked index
 - Floyd Cycle detection can also be used here -> fast and slow pointer 
