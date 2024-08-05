@@ -1,13 +1,37 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+/*
+ - Solution 2 
+ Difficulty : Easy, but not easy to think SC : O(1)
+ TC : O(n)   SC: O(1)
+ Leetcode: https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/
+*/
+class Solution {
+public:
+    int getDecimalValue(ListNode* head) {
+        
+        //vector<int> v;
+        ListNode *temp = head;
+        int c=0;
+        long long int num=0;
+
+        while(temp!=NULL){         
+            if(temp!=head){
+                num = num*2;
+            }
+            num = num + (temp->val * 1);
+            temp = temp->next;
+        }
+        
+        return num;
+    }
+};
+
+//--------------------------------------------------------------------------------------------------------------------------
+/*
+ Solution 1
+ - Difficulty : Easy
+ - TC : O(n)   SC: O(n)
+ 
+*/
 class Solution {
 public:
     int getDecimalValue(ListNode* head) {
